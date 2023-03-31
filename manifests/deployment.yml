@@ -1,0 +1,19 @@
+apiVersion : apps/v1
+kind: Deployment
+metadata:
+  name: anshuazuredevopsgithubacraksapp 
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: anshuazuredevopsgithubacraksapp
+  template:
+    metadata:
+      labels:
+        app: anshuazuredevopsgithubacraksapp 
+    spec:
+      containers:
+        - name: anshuazuredevopsgithubacraksapp 
+          image: multisite.azurecr.io/anshuazuredevopsgithubacraksapp
+          ports:
+          - containerPort: 80
